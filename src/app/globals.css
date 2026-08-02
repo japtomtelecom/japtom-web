@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f7faf8;
+  color: #1e4537;
+}
+
+.btn-primary {
+  @apply inline-block bg-accent-500 hover:bg-accent-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors;
+}
+
+.btn-secondary {
+  @apply inline-block bg-white border border-brand-200 hover:bg-brand-50 text-brand-700 font-semibold px-6 py-3 rounded-xl transition-colors;
+}
+
+.btn-whatsapp {
+  @apply inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-3 rounded-xl transition-colors;
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-sm border border-brand-100;
+}
+
+.input {
+  @apply w-full border border-brand-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-400;
+}
+
+.section {
+  @apply max-w-6xl mx-auto px-4 md:px-8;
+}
