@@ -56,7 +56,6 @@ export default function ServiciosPage() {
           {SERVICIOS.map((s) => (
             <div key={s.nombre} className="card overflow-hidden">
               {s.imagen ? (
-                // eslint-disable-next-line @next/next/no-img-element
                 <img src={s.imagen} alt={s.nombre} className="w-full h-40 object-cover" />
               ) : (
                 <div className="w-full h-40 bg-brand-50 flex items-center justify-center text-5xl">
@@ -67,7 +66,7 @@ export default function ServiciosPage() {
                 <h3 className="font-display font-bold text-lg text-brand-800 mb-2">{s.nombre}</h3>
                 <p className="text-brand-500 text-sm mb-4">{s.descripcion}</p>
                 
-                  href={`https://wa.me/59171537257?text=${encodeURIComponent(`Hola, quiero cotizar el servicio de ${s.nombre}.`)}`}
+                  href={`https://wa.me/59171537257?text=${encodeURIComponent('Hola, quiero cotizar el servicio de ' + s.nombre + '.')}`}
                   target="_blank"
                   rel="noreferrer"
                   className="text-accent-500 font-semibold text-sm hover:underline"
