@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 export default function ContactoPage() {
   const wa1 = 'https://wa.me/59171537257?text=' + encodeURIComponent('Hola, quiero más información.');
   const wa2 = 'https://wa.me/59177766262?text=' + encodeURIComponent('Hola, quiero más información.');
+  const waPago = 'https://wa.me/59171537257?text=' + encodeURIComponent('Hola, quiero los datos para hacer mi pago.');
 
   return (
     <>
@@ -13,7 +14,8 @@ export default function ContactoPage() {
           Contáctanos
         </h1>
         <p className="text-brand-500 text-center mb-12">
-          Estamos para ayudarte. Escríbenos por WhatsApp o realiza tu pago con los datos de abajo.
+          Estamos para ayudarte. Escríbenos por WhatsApp para más información o para recibir los
+          datos de pago.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -30,17 +32,14 @@ export default function ContactoPage() {
           </div>
 
           <div className="card p-6">
-            <h2 className="font-display text-xl font-semibold text-brand-700 mb-4">💳 Datos para pago</h2>
-            <dl className="text-sm space-y-3">
-              <div>
-                <dt className="text-brand-500">Banco</dt>
-                <dd className="font-semibold text-brand-800">BancoSol</dd>
-              </div>
-              <div>
-                <dt className="text-brand-500">Cuenta</dt>
-                <dd className="font-semibold text-brand-800">N° 507736-000-001 — Jaime Antonio Arriaza Prieto</dd>
-              </div>
-            </dl>
+            <h2 className="font-display text-xl font-semibold text-brand-700 mb-4">💳 Pagos</h2>
+            <p className="text-sm text-brand-500 mb-4">
+              Aceptamos pagos por transferencia bancaria (BancoSol). Por seguridad, no publicamos
+              el número de cuenta aquí — escríbenos por WhatsApp y te lo enviamos al instante.
+            </p>
+            <a href={waPago} target="_blank" rel="noreferrer" className="btn-whatsapp w-full justify-center">
+              📲 Solicitar datos de pago
+            </a>
             <p className="text-xs text-brand-400 mt-4">
               Después de tu pago, envíanos el comprobante por WhatsApp para registrarlo en tu cuenta.
             </p>
