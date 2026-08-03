@@ -24,7 +24,7 @@ function TarjetaPlan({ plan }) {
         Bs {plan.precio}
         <span className="text-sm font-normal text-brand-400"> /{plan.frecuencia === 'Semestral' ? 'semestre' : 'mes'}</span>
       </div>
-      
+      <a
         href={`https://wa.me/59171537257?text=${encodeURIComponent(`Hola, quiero contratar el plan ${plan.nombre}.`)}`}
         target="_blank"
         rel="noreferrer"
