@@ -22,7 +22,7 @@ export async function POST(request) {
 
   const { data: cliente, error } = await supabaseAdmin
     .from('v_clientes_estado')
-    .select('nombre, plan, precio, frecuencia, estado, fecha_vencimiento, activo, ciudad')
+    .select('nombre, plan, precio, frecuencia, estado, cubierto_hasta, activo, ciudad')
     .eq('codigo', codigo.trim().toUpperCase())
     .single();
 
@@ -53,6 +53,6 @@ export async function POST(request) {
     frecuencia: cliente.frecuencia,
     activo: cliente.activo,
     estado: cliente.estado,
-    fecha_vencimiento: cliente.fecha_vencimiento,
+    fecha_vencimiento: cliente.cubierto_hasta,
   });
 }
