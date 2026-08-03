@@ -59,22 +59,24 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden md:flex items-center gap-2 bg-white/10 rounded-full p-1 border border-white/20">
+          <div className="flex items-center gap-1 bg-white/10 rounded-full p-1 border border-white/20">
             <button
               onClick={() => cambiarIdioma('es')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-colors ${
+              className={`flex items-center gap-1.5 px-2.5 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold transition-colors ${
                 lang === 'es' ? 'bg-accent text-white' : 'text-brand-100 hover:bg-white/10'
               }`}
             >
-              <Bandera pais="bo" /> ES
+              <Bandera pais="bo" />
+              <span className="hidden md:inline">ES</span>
             </button>
             <button
               onClick={() => cambiarIdioma('en')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-colors ${
+              className={`flex items-center gap-1.5 px-2.5 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold transition-colors ${
                 lang === 'en' ? 'bg-accent text-white' : 'text-brand-100 hover:bg-white/10'
               }`}
             >
-              <Bandera pais="us" /> EN
+              <Bandera pais="us" />
+              <span className="hidden md:inline">EN</span>
             </button>
           </div>
 
@@ -100,24 +102,6 @@ export default function Header() {
               {l.label}
             </Link>
           ))}
-          <div className="flex items-center gap-2 px-4 py-3">
-            <button
-              onClick={() => cambiarIdioma('es')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold ${
-                lang === 'es' ? 'bg-accent text-white' : 'bg-brand-800 text-brand-100'
-              }`}
-            >
-              <Bandera pais="bo" /> ES
-            </button>
-            <button
-              onClick={() => cambiarIdioma('en')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold ${
-                lang === 'en' ? 'bg-accent text-white' : 'bg-brand-800 text-brand-100'
-              }`}
-            >
-              <Bandera pais="us" /> EN
-            </button>
-          </div>
         </nav>
       )}
     </header>
