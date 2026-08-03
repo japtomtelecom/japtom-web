@@ -13,7 +13,6 @@ export default function Footer() {
           <div className="font-semibold text-white mb-2">Enlaces</div>
           <ul className="space-y-1 text-brand-200">
             <li><a href="/servicios" className="hover:text-white">Servicios</a></li>
-            <li><a href="/planes" className="hover:text-white">Otros servicios</a></li>
             <li><a href="/cobertura" className="hover:text-white">Cobertura</a></li>
             <li><a href="/consulta" className="hover:text-white">Consulta tu cuenta</a></li>
             <li><a href="/contacto" className="hover:text-white">Contacto</a></li>
