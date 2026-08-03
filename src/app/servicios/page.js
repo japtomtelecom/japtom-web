@@ -68,7 +68,7 @@ export default function ServiciosPage() {
                 <h3 className="font-display font-bold text-lg text-brand-800 mb-2">{s.nombre}</h3>
                 <p className="text-brand-500 text-sm mb-4">{s.descripcion}</p>
                 
-                  href={`https://wa.me/59171537257?text=${encodeURIComponent('Hola, quiero cotizar el servicio de ' + s.nombre + '.')}`}
+                  <a href={`https://wa.me/59171537257?text=${encodeURIComponent('Hola, quiero cotizar el servicio de ' + s.nombre + '.')}`}
                   target="_blank"
                   rel="noreferrer"
                   className="text-accent-500 font-semibold text-sm hover:underline"
