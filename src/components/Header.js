@@ -53,18 +53,22 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden md:flex items-center text-xs font-semibold border border-brand-600 rounded-full overflow-hidden">
+          <div className="hidden md:flex items-center gap-2 bg-white/10 rounded-full p-1 border border-white/20">
             <button
               onClick={() => cambiarIdioma('es')}
-              className={`px-3 py-1 ${lang === 'es' ? 'bg-brand-600' : 'hover:bg-brand-700'}`}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-colors ${
+                lang === 'es' ? 'bg-accent text-white' : 'text-brand-100 hover:bg-white/10'
+              }`}
             >
-              ES
+              <span className="text-lg">🇧🇴</span> ES
             </button>
             <button
               onClick={() => cambiarIdioma('en')}
-              className={`px-3 py-1 ${lang === 'en' ? 'bg-brand-600' : 'hover:bg-brand-700'}`}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-colors ${
+                lang === 'en' ? 'bg-accent text-white' : 'text-brand-100 hover:bg-white/10'
+              }`}
             >
-              EN
+              <span className="text-lg">🇺🇸</span> EN
             </button>
           </div>
 
@@ -93,15 +97,19 @@ export default function Header() {
           <div className="flex items-center gap-2 px-4 py-3">
             <button
               onClick={() => cambiarIdioma('es')}
-              className={`px-3 py-1 rounded text-xs font-semibold ${lang === 'es' ? 'bg-brand-600' : 'bg-brand-800'}`}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold ${
+                lang === 'es' ? 'bg-accent text-white' : 'bg-brand-800 text-brand-100'
+              }`}
             >
-              ES
+              <span className="text-lg">🇧🇴</span> ES
             </button>
             <button
               onClick={() => cambiarIdioma('en')}
-              className={`px-3 py-1 rounded text-xs font-semibold ${lang === 'en' ? 'bg-brand-600' : 'bg-brand-800'}`}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold ${
+                lang === 'en' ? 'bg-accent text-white' : 'bg-brand-800 text-brand-100'
+              }`}
             >
-              EN
+              <span className="text-lg">🇺🇸</span> EN
             </button>
           </div>
         </nav>
