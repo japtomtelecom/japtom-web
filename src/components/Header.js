@@ -27,6 +27,13 @@ const T = {
   },
 };
 
+function Bandera({ pais }) {
+  const src = pais === 'bo' ? 'https://flagcdn.com/w40/bo.png' : 'https://flagcdn.com/w40/us.png';
+  return (
+    <img src={src} alt={pais === 'bo' ? 'Bolivia' : 'USA'} className="w-6 h-4 object-cover rounded-sm" />
+  );
+}
+
 export default function Header() {
   const [abierto, setAbierto] = useState(false);
   const { lang, cambiarIdioma } = useIdioma();
@@ -36,7 +43,6 @@ export default function Header() {
     <header className="bg-brand-800 text-white">
       <div className="section flex items-center justify-between py-4">
         <Link href="/" className="flex items-center gap-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.png" alt="JapTom Telecom" className="w-9 h-9 rounded-full bg-white" />
           <div>
             <div className="font-display text-lg font-bold leading-tight">JapTom Telecom</div>
@@ -60,7 +66,7 @@ export default function Header() {
                 lang === 'es' ? 'bg-accent text-white' : 'text-brand-100 hover:bg-white/10'
               }`}
             >
-              <span className="text-lg">🇧🇴</span> ES
+              <Bandera pais="bo" /> ES
             </button>
             <button
               onClick={() => cambiarIdioma('en')}
@@ -68,7 +74,7 @@ export default function Header() {
                 lang === 'en' ? 'bg-accent text-white' : 'text-brand-100 hover:bg-white/10'
               }`}
             >
-              <span className="text-lg">🇺🇸</span> EN
+              <Bandera pais="us" /> EN
             </button>
           </div>
 
@@ -101,7 +107,7 @@ export default function Header() {
                 lang === 'es' ? 'bg-accent text-white' : 'bg-brand-800 text-brand-100'
               }`}
             >
-              <span className="text-lg">🇧🇴</span> ES
+              <Bandera pais="bo" /> ES
             </button>
             <button
               onClick={() => cambiarIdioma('en')}
@@ -109,7 +115,7 @@ export default function Header() {
                 lang === 'en' ? 'bg-accent text-white' : 'bg-brand-800 text-brand-100'
               }`}
             >
-              <span className="text-lg">🇺🇸</span> EN
+              <Bandera pais="us" /> EN
             </button>
           </div>
         </nav>
